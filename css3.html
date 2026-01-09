@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Formats & Background Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header with named color */
+    header {
+      background-color: steelblue; /* named color */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Section with HEX color */
+    section {
+      background-color: #f4e1d2; /* HEX color */
+      padding: 30px;
+    }
+
+    /* Div with RGB text color and HSL background */
+    .color-box {
+      color: rgb(255, 255, 255); /* RGB text color */
+      background-color: hsl(200, 70%, 40%); /* HSL background */
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    /* Footer with background image */
+    footer {
+      background-image: url("https://picsum.photos/1200/300");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Color & Background Properties Demo</h1>
+  </header>
+
+  <section>
+    <h2>Section with HEX Background</h2>
+    <p>This section uses a HEX color for its background.</p>
+
+    <div class="color-box">
+      <h3>RGB Text & HSL Background</h3>
+      <p>
+        This div demonstrates RGB for text color and HSL for background color.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Footer with background image (cover & no-repeat)</p>
+  </footer>
+
+</body>
+</html>
