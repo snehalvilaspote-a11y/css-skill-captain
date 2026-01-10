@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Model Practice</title>
+
+  <style>
+    /* Common box styles */
+    .box {
+      width: 200px;
+      height: 150px;
+      padding: 20px 10px;        /* top/bottom | left/right */
+      border: 5px solid #333;
+      margin: 20px;              /* space outside the box */
+      background-color: #b3d9ff;
+      display: inline-block;     /* side-by-side layout */
+      box-sizing: border-box;    /* keeps width & height fixed */
+      vertical-align: top;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* Individual box styles */
+    .box1 {
+      background-color: #ffcccb;
+      margin-right: 40px;        /* extra spacing between boxes */
+    }
+
+    .box2 {
+      background-color: #c1f0c1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box box1">Box 1</div>
+  <div class="box box2">Box 2</div>
+
+</body>
+</html>
