@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Styled Lists and Links</title>
+
+<style>
+/* ===== UNORDERED LIST STYLES ===== */
+.ul-circle {
+    list-style-type: circle;
+}
+
+.ul-square {
+    list-style-type: square;
+}
+
+.ul-image {
+    list-style-image: url('https://via.placeholder.com/12');
+}
+
+/* ===== ORDERED LIST STYLE ===== */
+.ol-roman {
+    list-style-type: upper-roman;
+}
+
+/* ===== LINK STYLES ===== */
+.links a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+.links a:visited {
+    color: purple;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.links a:active {
+    color: red;
+}
+</style>
+</head>
+
+<body>
+
+<h3>Unordered List (Circle)</h3>
+<ul class="ul-circle">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+</ul>
+
+<h3>Unordered List (Square)</h3>
+<ul class="ul-square">
+    <li>Dog</li>
+    <li>Cat</li>
+    <li>Rabbit</li>
+</ul>
+
+<h3>Unordered List (Image)</h3>
+<ul class="ul-image">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+
+<h3>Ordered List (Upper Roman)</h3>
+<ol class="ol-roman">
+    <li>Introduction</li>
+    <li>Body</li>
+    <li>Conclusion</li>
+</ol>
+
+<h3>Styled Links</h3>
+<div class="links">
+    <a href="#">Home</a> |
+    <a href="#">About</a> |
+    <a href="#">Contact</a>
+</div>
+
+</body>
+</html>
