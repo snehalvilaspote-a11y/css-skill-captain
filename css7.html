@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Display, Visibility, and Overflow</title>
+
+<style>
+/* ===== BUTTON DISPLAY TYPES ===== */
+.block-btn {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.inline-btn {
+    display: inline;
+}
+
+.inline-block-btn {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* ===== VISIBILITY VS DISPLAY ===== */
+.hidden-text {
+    visibility: hidden;
+}
+
+.none-text {
+    display: none;
+}
+
+/* ===== OVERFLOW STYLES ===== */
+.container {
+    width: 200px;
+    height: 80px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+.visible {
+    overflow: visible;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.scroll {
+    overflow: scroll;
+}
+
+.auto {
+    overflow: auto;
+}
+</style>
+</head>
+
+<body>
+
+<h3>Buttons with Different Display Properties</h3>
+<button class="block-btn">Block Button</button>
+<button class="inline-btn">Inline Button</button>
+<button class="inline-block-btn">Inline-Block Button</button>
+
+<h3>Visibility vs Display</h3>
+<p class="hidden-text">This paragraph is hidden using visibility: hidden.</p>
+<p class="none-text">This paragraph is hidden using display: none.</p>
+<p>This paragraph is always visible.</p>
+
+<h3>Overflow Examples</h3>
+
+<p>Overflow: visible</p>
+<div class="container visible">
+    This is a long text that overflows outside the container box when overflow is visible.
+</div>
+
+<p>Overflow: hidden</p>
+<div class="container hidden">
+    This is a long text that overflows but gets clipped when overflow is hidden.
+</div>
+
+<p>Overflow: scroll</p>
+<div class="container scroll">
+    This is a long text that always shows scrollbars, even if not needed.
+</div>
+
+<p>Overflow: auto</p>
+<div class="container auto">
+    This is a long text that adds scrollbars only when required.
+</div>
+
+</body>
+</html>
