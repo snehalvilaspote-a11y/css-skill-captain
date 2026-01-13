@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Card</title>
+<style>
+  .card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 400px;
+  }
+
+  .card-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .card-text {
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <img src="image.jpg" alt="Card Image" class="card-img">
+  <p class="card-text">
+    This is the best modern layout solution. The image and text stay side by side
+    without float issues, clearfix hacks, or layout breaks.
+  </p>
+</div>
+
+</body>
+</html>
