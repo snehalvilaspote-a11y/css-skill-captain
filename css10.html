@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Layout</title>
+  <style>
+    /* Global styling */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header & Footer */
+    header,
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      height: 80px;
+      font-size: 1.2rem;
+    }
+
+    /* Main Flex Container */
+    .container {
+      display: flex;
+      justify-content: space-around; /* or space-between */
+      align-items: center;           /* vertical centering */
+      flex: 1;
+      padding: 20px;
+      gap: 10px;
+      background-color: #f4f4f4;
+    }
+
+    /* Flex Items */
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      color: white;
+      font-size: 1.1rem;
+
+      flex-basis: 200px;  /* initial width */
+      flex-shrink: 1;     /* allow shrinking */
+    }
+
+    .box1 {
+      background-color: #e74c3c;
+      flex-grow: 1;
+    }
+
+    .box2 {
+      background-color: #3498db;
+      flex-grow: 2;
+    }
+
+    .box3 {
+      background-color: #2ecc71;
+      flex-grow: 3;
+    }
+
+    /* Responsive tweak for small screens */
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    My Flexbox Header
+  </header>
+
+  <main class="container">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </main>
+
+  <footer>
+    My Flexbox Footer
+  </footer>
+
+</body>
+</html>
