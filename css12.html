@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Services & Contact</title>
+
+<style>
+/* ===== Services List ===== */
+.services {
+  list-style: none;
+  max-width: 300px;
+  padding: 0;
+}
+
+.services li {
+  padding: 12px;
+  background: #f2f2f2;
+  margin-bottom: 6px;
+  transition: 0.3s;
+}
+
+/* Alternate background */
+.services li:nth-child(odd) {
+  background: #e0e0e0;
+}
+
+/* Hover effect */
+.services li:hover {
+  background: #333;
+  color: white;
+}
+
+/* Emoji before items */
+.services li::before {
+  content: "⭐ ";
+}
+
+/* Reduce opacity except Marketing */
+.services li:not(.marketing) {
+  opacity: 0.5;
+}
+
+.services li.marketing {
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* ===== Contact Form ===== */
+.contact-form {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 8px;
+  border: 2px solid #ccc;
+  outline: none;
+}
+
+/* Focus highlight */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+}
+
+/* Button styling */
+.contact-form button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Button hover */
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+/* Arrow after button */
+.contact-form button::after {
+  content: " ➡️";
+}
+</style>
+
+</head>
+<body>
+
+<h2>Our Services</h2>
+<ul class="services">
+  <li>Design</li>
+  <li class="marketing">Marketing</li>
+  <li>Development</li>
+  <li>SEO</li>
+</ul>
+
+<h2>Contact Us</h2>
+<form class="contact-form">
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+  <textarea placeholder="Your Message"></textarea>
+  <button type="submit">Send</button>
+</form>
+
+</body>
+</html>
