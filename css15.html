@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout and Visibility</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Buttons */
+    .block {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .inline {
+      display: inline;
+    }
+
+    .inline-block {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    /* Paragraphs */
+    .hidden {
+      visibility: hidden;
+    }
+
+    .none {
+      display: none;
+    }
+
+    /* Overflow container */
+    .box {
+      width: 200px;
+      height: 80px;
+      border: 2px solid black;
+      margin: 10px 0;
+    }
+
+    .visible { overflow: visible; }
+    .hidden-overflow { overflow: hidden; }
+    .scroll { overflow: scroll; }
+    .auto { overflow: auto; }
+  </style>
+</head>
+
+<body>
+
+  <h3>Buttons (Display Property)</h3>
+  <button class="block">Display: block</button>
+  <button class="inline">Display: inline</button>
+  <button class="inline-block">Display: inline-block</button>
+
+  <h3>Paragraphs (Visibility vs Display)</h3>
+  <p>This paragraph is visible.</p>
+  <p class="hidden">This paragraph is visibility: hidden</p>
+  <p class="none">This paragraph is display: none</p>
+
+  <h3>Overflow Examples</h3>
+
+  <div class="box visible">
+    overflow: visible <br>
+    This text is longer than the box height.
+  </div>
+
+  <div class="box hidden-overflow">
+    overflow: hidden <br>
+    This text is longer than the box height.
+  </div>
+
+  <div class="box scroll">
+    overflow: scroll <br>
+    This text is longer than the box height.
+  </div>
+
+  <div class="box auto">
+    overflow: auto <br>
+    This text is longer than the box height.
+  </div>
+
+</body>
+</html>
