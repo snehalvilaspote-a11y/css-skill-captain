@@ -2,85 +2,214 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Layout and Visibility</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Landing Page</title>
 
   <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
     }
 
-    /* Buttons */
-    .block {
+    img {
+      max-width: 100%;
       display: block;
-      margin-bottom: 10px;
     }
 
-    .inline {
-      display: inline;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    .inline-block {
+    /* Header */
+    header {
+      background: #1e293b;
+      color: #fff;
+      padding: 1rem 2rem;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav a:hover {
+      color: #38bdf8;
+      transition: color 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 4rem 2rem;
+      background: #f1f5f9;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
       display: inline-block;
-      margin-left: 10px;
+      background: #2563eb;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.3s;
     }
 
-    /* Paragraphs */
-    .hidden {
-      visibility: hidden;
+    .btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-3px);
     }
 
-    .none {
-      display: none;
+    /* Features Section */
+    .features {
+      padding: 4rem 2rem;
+      background: #fff;
     }
 
-    /* Overflow container */
-    .box {
-      width: 200px;
-      height: 80px;
-      border: 2px solid black;
-      margin: 10px 0;
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
     }
 
-    .visible { overflow: visible; }
-    .hidden-overflow { overflow: hidden; }
-    .scroll { overflow: scroll; }
-    .auto { overflow: auto; }
+    .card {
+      background: #f8fafc;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin: 1rem 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e293b;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    footer a {
+      margin: 0 0.5rem;
+      color: #38bdf8;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav ul {
+        gap: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <h3>Buttons (Display Property)</h3>
-  <button class="block">Display: block</button>
-  <button class="inline">Display: inline</button>
-  <button class="inline-block">Display: inline-block</button>
+  <!-- Header -->
+  <header>
+    <div class="nav">
+      <h2>MyWebsite</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-  <h3>Paragraphs (Visibility vs Display)</h3>
-  <p>This paragraph is visible.</p>
-  <p class="hidden">This paragraph is visibility: hidden</p>
-  <p class="none">This paragraph is display: none</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Build Better Websites</h1>
+      <p>Create modern, responsive, and professional layouts using CSS Flexbox, Grid, and animations.</p>
+      <a href="#" class="btn">Get Started</a>
+    </div>
 
-  <h3>Overflow Examples</h3>
+    <div>
+      <img src="https://via.placeholder.com/500x300" alt="Hero Image">
+    </div>
+  </section>
 
-  <div class="box visible">
-    overflow: visible <br>
-    This text is longer than the box height.
-  </div>
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-grid">
+      <div class="card">
+        <h3>Responsive</h3>
+        <p>Works perfectly on mobile, tablet, and desktop screens.</p>
+      </div>
 
-  <div class="box hidden-overflow">
-    overflow: hidden <br>
-    This text is longer than the box height.
-  </div>
+      <div class="card">
+        <h3>Modern Design</h3>
+        <p>Clean layout with smooth animations and hover effects.</p>
+      </div>
 
-  <div class="box scroll">
-    overflow: scroll <br>
-    This text is longer than the box height.
-  </div>
+      <div class="card">
+        <h3>Easy to Use</h3>
+        <p>Simple structure using Flexbox and Grid.</p>
+      </div>
+    </div>
+  </section>
 
-  <div class="box auto">
-    overflow: auto <br>
-    This text is longer than the box height.
-  </div>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 MyWebsite</p>
+    <div>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
 
 </body>
 </html>
